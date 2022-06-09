@@ -6,15 +6,16 @@
     display: flex;
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     flex-wrap: wrap;
     font-family: 'Roboto', sans-serif;
 }
 .grid-container .side-bar{
     width: 15vw;
-    height: 100vh;
     background-color: black;
-}
+    overflow: hidden;
+    transition: .4s;
+} 
 .grid-container .main{
     width: 85vw;
     height: 100vh;
@@ -48,9 +49,11 @@
     display: grid;
     width: 80%;
     margin: auto;
-    height: 150px;
+    height: 95%;
     background: white;
     position: relative;
+}
+.inner .logo{
 }
 .inner .logo div{
     width: 300px;
@@ -63,7 +66,10 @@
     height: 170px;
     background: lightgrey;
     text-align: center;
-    padding: 30px 0px 
+    padding: 30px 50px 
+}
+.inner .title h4{
+    margin-bottom: 20px
 }
 .inner .title .down{
     padding: 15px 140px 0px 140px;
@@ -71,7 +77,6 @@
 }
 .inner .cards{
     width: 100%;
-    height: 300px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -99,36 +104,65 @@
 .inner .cards .card p{
     text-align: justify;
 }
-.inner .footer{
-    position: fixed;
-    left: 15%;
-    bottom: 0;
-    width: 80vw;
-    background: white;
-    color: black;
-    border-top: 1px solid grey;
-    padding: 20px 0px 20px 100px
+.footer{
+    width: 85vw;
+    height: 5%;
+    padding-left: 10%
 }
+
+/*=======SIDE BAR COLLAPSE*/
+.grid-container .side-bar .closebtn{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    float: right;
+    margin: 15px 15px 0px 0px
+}
+#main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: margin-left .5s;
+    padding: 16px;
+    transform: translateX(0px);
+    z-index: 2;
+  }
 
 /*responsive*/
 
-@media (max-width: 1037px){
+/* @media (max-width: 1037px){
     .inner .title {
         height: 300px !important;
 
     }
 }
-@media (max-width: 972px){
-    .side-bar{
-        height: auto !important;
-    }
-    .main{
-        height: 1500px !important;
-    }
-}
+
 
 @media (max-width: 775px){
     .inner .title {
         height: 400px !important;
     }
+}
+@media (max-width: 700px){
+    .inner .title .down{
+        padding: 15px !important;
+    }
+    .inner .title {
+        height: 300px !important;
+    }
+    body .grid-container .side-bar{
+        position: fixed;
+        width: 200px;
+        height: 100%;
+        z-index: 1;
+    }
+} */
+@media (max-width: 972px){
+    .main{
+        height: 1200px !important;
+    }
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
