@@ -77,10 +77,9 @@ div.content {
     margin-bottom: 15px;
 }
 .inner .cards .card{
-    width: 300px;
+    width: 400px;
     margin: auto;
-    padding: 15px;
-    
+    padding: 15px; 
 }
 .inner .cards .card p{
     text-align: justify;
